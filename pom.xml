@@ -69,7 +69,22 @@
             <artifactId>spring-boot-starter-validation</artifactId>
             <version>3.0.4</version>
         </dependency>
-
+<!--        实现分布式session的方式：
+                1、利用redis实现，这里先导包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+<!--        commons-pool2对象池依赖-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+<!--&lt;!&ndash;        spring session依赖&ndash;&gt;     直接使用redis存放用户登录信息的话，这里的spring-session就不用了-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.session</groupId>-->
+<!--            <artifactId>spring-session-data-redis</artifactId>-->
+<!--        </dependency>-->
 
     </dependencies>
 
