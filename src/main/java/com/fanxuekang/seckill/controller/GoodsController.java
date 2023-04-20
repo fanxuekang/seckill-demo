@@ -1,6 +1,7 @@
 package com.fanxuekang.seckill.controller;
 
 import com.fanxuekang.seckill.pojo.User;
+import com.fanxuekang.seckill.service.IGoodsService;
 import com.fanxuekang.seckill.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,7 +25,8 @@ public class GoodsController {
     @Autowired
     private IUserService userService;
 
-
+    @Autowired
+    private IGoodsService goodsService;
     /**
      * 功能：跳转到商品列表页面
      * @param session
@@ -45,6 +47,7 @@ public class GoodsController {
 //            return "login";
 //        }
         model.addAttribute("user",user);
+        model.addAttribute("goodsList",goodsService.findGoodsVO());
         return "goodsList";
     }
 }
