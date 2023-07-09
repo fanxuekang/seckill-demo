@@ -41,8 +41,8 @@ public class WebConfig implements WebMvcConfigurer {
      * springboot的项目，他的资源就是放在static下面的，图片是放在static中，然后就可以直直接/img/iphone12.png就能找打
      * @param registry
      */
-//    @Override
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
-//    }
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+    }
 }
